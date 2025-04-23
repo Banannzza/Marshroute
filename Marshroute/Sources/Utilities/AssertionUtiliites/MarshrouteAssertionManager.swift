@@ -8,17 +8,17 @@ public final class MarshrouteAssertionManager {
     static func assert(
         _ condition: @autoclosure () -> Bool,
         _ message: @autoclosure () -> String,
-        file: StaticString,
+        fileId: StaticString,
         line: UInt)
     {
-        instance.assert(condition(), message(), file: file, line: line)
+        instance.assert(condition(), message(), fileId: fileId, line: line)
     }
     
     static func assertionFailure(
         _ message: @autoclosure () -> String,
-        file: StaticString,
+        fileId: StaticString,
         line: UInt)
     {
-        instance.assertionFailure(message(), file: file, line: line)
+        instance.assertionFailure(message(), fileId: fileId, line: line)
     }
 }
